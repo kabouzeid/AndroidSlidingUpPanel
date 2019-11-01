@@ -201,7 +201,7 @@ public class SlidingUpPanelLayout extends ViewGroup {
      * A panel view is locked into internal scrolling or another condition that
      * is preventing a drag.
      */
-    private boolean mIsUnableToDrag = false;
+    private final boolean mIsUnableToDrag = false;
 
     /**
      * Flag indicating that sliding feature is enabled\disabled
@@ -904,7 +904,7 @@ public class SlidingUpPanelLayout extends ViewGroup {
                 mInitialMotionY = y;
                 if (!isViewUnder(mDragView, (int) x, (int) y)) {
                     mDragHelper.cancel();
-                    mIsUnableToDrag = true;
+//                    mIsUnableToDrag = true;
                     return false;
                 }
 
@@ -918,7 +918,7 @@ public class SlidingUpPanelLayout extends ViewGroup {
                     return false;
                 } else if ((ady > dragSlop && adx > ady)) {
                     mDragHelper.cancel();
-                    mIsUnableToDrag = true;
+//                    mIsUnableToDrag = true;
                     return false;
                 }
                 break;
