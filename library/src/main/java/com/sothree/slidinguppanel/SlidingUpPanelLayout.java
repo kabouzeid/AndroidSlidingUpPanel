@@ -416,12 +416,6 @@ public class SlidingUpPanelLayout extends ViewGroup {
         if (!mFirstLayout) {
             requestLayout();
         }
-
-        if (getPanelState() == PanelState.COLLAPSED) {
-            smoothToBottom();
-            invalidate();
-            return;
-        }
     }
 
     protected void smoothToBottom() {
